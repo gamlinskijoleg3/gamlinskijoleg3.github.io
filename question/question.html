@@ -9,10 +9,22 @@
   </head>
   <body>
     <div id="question-container">
-        <div id="question-itself">
-            
-        </div>
+      <div id="question-itself">Перше питання: Хто відкрив Америку?</div>
     </div>
+    <div id="answer-container">
+      <button id="answer1" class="answer">Марко Поло</button>
+      <button id="answer2" class="answer">Васко да Гама</button>
+      <button id="answer3" class="answer">Фернан Магеллан</button>
+      <button id="answer4" class="answer">Христофор Колумб</button>
+    </div>
+    <div id="current-question">
+      <div id="current-question-number">1</div>
+      <div id="out-of">/20</div>
+    </div>
+    <input id="goto" value ="" type="text" placeholder="Введи номер питання"/>
+    <button id="submit-button" type="submit">Відправити</button>
+    <button id="next-question">Наступне питання</button>
+
     <script src="script.js"></script>
   </body>
 </html>
