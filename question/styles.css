@@ -8,11 +8,11 @@ body {
   background: url(pictures/background.png);
 }
 
-#question-container{
-  transform: translate(-50%, -50%);
-  position: fixed;
-  top: 20%;
-  left: 50%;
+#wrapper{
+  width: 100vw;
+  height: 100vh;
+  align-content: start;
+  justify-content: center;
 }
 
 #question-itself{
@@ -24,6 +24,7 @@ body {
 
 #answer-container{
   display: grid;
+  height: 50%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
@@ -32,19 +33,21 @@ body {
   top: 60%;
   left: 50%;
   position: fixed;
-  grid-column-gap: 10%;
+  grid-column-gap: 20%;
   grid-row-gap: 10%;
 }
 
 #answer1, #answer2, #answer3, #answer4{
   width: 100%;
-  height: 20vh;
+  height: 100%;
   color: white;
   cursor: pointer;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
-  font-size: 20px;
+  font-size: 3vw;
   border: none;
   transition: .2s;
+  text-align: center;
+  align-content: center;
 }
 
 #answer1:active, #answer2:active, #answer3:active, #answer4:active{
@@ -72,7 +75,7 @@ body {
   background-color: green;
 }
 
-#next-question{
+#next-question,#prevoius-question{
   width: 100px;
   height: 100px;
   cursor: pointer;
@@ -101,7 +104,7 @@ body {
   cursor: pointer;
 }
 
-#next-question, #goto, #submit-button{
+#next-question, #prevoius-question, #goto, #submit-button{
   text-align: center;
   justify-content: center;
 }

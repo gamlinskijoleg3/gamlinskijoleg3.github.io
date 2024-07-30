@@ -3,28 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1 question</title>
+    <title>Quiz</title>
     <link rel="icon" href="pictures/icon1.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="question-container">
-      <div id="question-itself"></div>
+    <div id="wrapper">
+      <div id="question-container">
+        <div id="question-itself">eded</div>
+      </div>
+      <div id="answer-container">
+        <div id="answer1" class="answer"><div>Марко Поло</div></div>
+        <div id="answer2" class="answer"><div>Васко да Гама</div></div>
+        <div id="answer3" class="answer"><div>Фернан Магеллан</div></div>
+        <div id="answer4" class="answer"><div>Христофор Колумб</div></div>
+      </div>
+      <div id="current-question">
+        <div id="current-question-number">1</div>
+        <div id="out-of">/20</div>
+      </div>
+      <input id="goto" value="" type="text" placeholder="Введи номер питання" />
+      <button id="submit-button" type="submit">Відправити</button>
+      <button id="next-question">Наступне питання</button>
+      <button id="prevoius-question">Попереднє питання</button>
     </div>
-    <div id="answer-container">
-      <button id="answer1" class="answer">Марко Поло</button>
-      <button id="answer2" class="answer">Васко да Гама</button>
-      <button id="answer3" class="answer">Фернан Магеллан</button>
-      <button id="answer4" class="answer">Христофор Колумб</button>
-    </div>
-    <div id="current-question">
-      <div id="current-question-number">1</div>
-      <div id="out-of">/20</div>
-    </div>
-    <input id="goto" value ="" type="text" placeholder="Введи номер питання"/>
-    <button id="submit-button" type="submit">Відправити</button>
-    <button id="next-question">Наступне питання</button>
-
     <script src="script.js"></script>
   </body>
 </html>
