@@ -6,11 +6,46 @@
     <title>Quiz</title>
     <link rel="icon" href="pictures/icon1.png" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
-  <body>
+  <body onload="init()">
+    <div id="menu">
+      <input
+        id="goto"
+        autocomplete="off"
+        value=""
+        type="text"
+        placeholder=""
+        maxlength="2"
+      />
+      <div id="submit-button">
+        <span class="material-symbols-outlined"> arrow_upward </span>
+      </div>
+      <div id="prevoius-question">
+        <span class="material-symbols-outlined"> arrow_back </span>
+      </div>
+      <div id="next-question">
+        <span class="material-symbols-outlined"> arrow_forward </span>
+      </div>
+      <div id="current-question">
+        <div id="current-question-number">1</div>
+        <div id="out-of">/20</div>
+      </div>
+      <div id="clock">
+        <div id="mins">0:</div>
+        <div id="secs">1</div>
+      </div>
+    </div>
     <div id="wrapper">
       <div id="question-container">
-        <div id="question-itself">eded</div>
+        <div id="question-itself"></div>
       </div>
       <div id="answer-container">
         <div id="answer1" class="answer"><div>Марко Поло</div></div>
@@ -18,15 +53,7 @@
         <div id="answer3" class="answer"><div>Фернан Магеллан</div></div>
         <div id="answer4" class="answer"><div>Христофор Колумб</div></div>
       </div>
-      <div id="current-question">
-        <div id="current-question-number">1</div>
-        <div id="out-of">/20</div>
-      </div>
-      <input id="goto" value="" type="text" placeholder="Введи номер питання" />
-      <button id="submit-button" type="submit">Відправити</button>
-      <button id="next-question">Наступне питання</button>
-      <button id="prevoius-question">Попереднє питання</button>
+      <script src="script.js"></script>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
