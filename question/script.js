@@ -1,4 +1,5 @@
-// cкорочення
+// cкорочення]
+console.log("s")
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
@@ -163,9 +164,6 @@ function tick() {
   }
 }
 
-if (secs == 60) {
-}
-
 function adder() {
   index = Number(currentQuestion.innerHTML) - 1;
   question.innerHTML = questions[index];
@@ -175,7 +173,7 @@ function adder() {
   answer4.innerHTML = answer4variants[index];
 }
 
-adder();
+adder()
 
 answer1.onclick = function () {
   answerClicked = answer1.innerHTML;
@@ -199,15 +197,17 @@ answer4.onclick = function () {
 
 function checkAnswer() {
   if (answerClicked == correctAnswers[index]) {
-    if (currentQuestion.innerHTML < 20 && currentQuestion.innerHTML != 19) {
+    if (
+      Number(currentQuestion.innerHTML) < 20 &&
+      Number(currentQuestion.innerHTML) != 19
+    ) {
       console.log("You are correct!");
       currentQuestion.innerHTML++;
       adder();
-    } else if (currentQuestion.innerHTML == 20) {
+    } else if (Number(currentQuestion.innerHTML) == 20) {
       console.log("You are correct!");
       adder();
-    } else if (currentQuestion.innerHTML == 19) {
-     
+      window.location.href = "ending/end.html";
     }
   } else {
     console.log("Nop");
@@ -239,3 +239,7 @@ submitButton.onclick = function () {
   }
   goto.value = "";
 };
+
+function function2(){
+  document.getElementById("num-of-answers").innerText = "2w2w";
+}
