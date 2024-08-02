@@ -240,6 +240,3 @@ submitButton.onclick = function () {
   goto.value = "";
 };
 
-function function2(){
-  document.getElementById("num-of-answers").innerText = "2w2w";
-}
