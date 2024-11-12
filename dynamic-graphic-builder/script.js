@@ -7,8 +7,8 @@ let currentColor = colorInput.value, a, b;
 const CENTER_X = 177;
 const CENTER_Y = 177;
 const SCALE = 20;
-const GRID_LIMIT = 340;
-const DOTS_CONSETRATION = 0.01;
+const GRID_LIMIT = 335
+let DOTS_CONSETRATION = 0.01;
 
 function placeDot(x) {
     let y = -b * Math.sqrt(x ** 2 / a ** 2 - 1);
