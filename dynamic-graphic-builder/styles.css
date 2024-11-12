@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --primary-color: #167d7f;
+    --secondary-color: #147b7d;
+    --highlight-color: #29a0b1;
+    --accent-color: #cc05e6;
+    --background-color: #98d7c2;
+    --input-bg-color: #ededed;
+    --text-color: #ffffff;
+    --footer-font-size: 10px;
+    --font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("https://fonts.google.com/share?selection.family=Montserrat:ital,wght@0,100..900;1,100..900");
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    z-index: 1;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: var(--footer-font-size);
+    background-color: var(--secondary-color);
+    color: #c6c7c7;
+}
+
+#grid {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 0.5px solid grey;
+    border-radius: 16px;
+}
+
+.axis {
+    position: absolute;
+    background-color: #000;
+}
+
+.x-axis {
+    width: 100%;
+    height: 2px;
+}
+
+.y-axis {
+    width: 2px;
+    height: 100%;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    position: absolute;
+    transition: 0.7s;
+}
+
+#text {
+    position: fixed;
+    background-color: var(--highlight-color);
+    top: 12vh;
+    padding: 10px;
+    border-radius: 12px;
+    color: var(--text-color);
+}
+
+#color-input {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.2s;
+}
+
+#color-input:hover {
+    transform: scale(1.1);
+}
+
+#input-a,
+#input-b {
+    position: fixed;
+    height: 30px;
+    width: 50vw;
+    max-width: 250px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: var(--input-bg-color);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#input-a:hover,
+#input-b:hover,
+#input-a:focus,
+#input-b:focus {
+    transform: scale(1.1);
+}
+
+#input-a {
+    top: 19vh;
+}
+
+#input-b {
+    top: 24vh;
+}
+
+@media (min-width: 800px) {
+    #input-a,
+    #input-b {
+        width: 15vw;
+    }
+
+    #input-a {
+        left: calc(42.5vw - 150px);
+        top: 21.4vh;
+    }
+
+    #input-b {
+        left: calc(42.5vw + 150px);
+        top: 21.4vh;
+    }
+
+    #color-input {
+        left: calc(50vw + 250px);
+        top: calc(30vh + 180px - 13.5px);
+    }
+
+    #grid {
+        top: 30vh;
+    }
+}
+
+@media (max-width: 799px) {
+    #input-a,
+    #input-b {
+        width: 80vw;
+    }
+
+    #color-input {
+        top: calc(40vh + 300px);
+    }
+
+    #grid {
+        top: 30vh;
+    }
+}
