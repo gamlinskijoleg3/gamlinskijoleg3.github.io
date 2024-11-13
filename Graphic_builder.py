@@ -5,7 +5,7 @@ from math import *
 # Значення для a і b
 a = 2
 b = 1
-scale = 15  # Коефіцієнт масштабу (додатні числа, більші за нуль)
+scale = 20  # Коефіцієнт масштабу (додатні числа, більші за нуль)
 
 fontForLetters = ("Arial", 16, "bold")
 
@@ -61,7 +61,7 @@ write("Y", align="center", font=fontForLetters)
 
 x_values = range(-a * 10, a * 10, 1)
 
-tracer(True)
+tracer(False) # не забути включити!!!
 
 # Малювання позитивної гілки гіперболи
 penup()
@@ -127,6 +127,34 @@ teleport(c2 * scale, 0)
 dot()
 teleport(xcor() - 30, ycor() - 25)
 write("F2", align="center", font=fontForLetters)
+
+
+# Вершини гіперболи і дійсна вісь гіперболи
+pensize(4)
+pendown()
+color('red')
+teleport(a*scale, 0)
+goto(-a*scale,0)
+
+# Уявна вісь гіперболи
+color("#098763")
+teleport(0, b*scale*5)
+goto(0, -b*scale*5)
+
+# Підписи
+color('red')
+teleport(a*scale + 10, -30)
+write("A1", align="center", font=fontForLetters)
+
+teleport(-a*scale -10, -30)
+write("A2", align="center", font=fontForLetters)
+
+color('#098763')
+teleport(+20, b*scale*5 +10)
+write("B1", align="center", font=fontForLetters)
+
+teleport(+20, -b*scale*5 -30)
+write("B2", align="center", font=fontForLetters)
 
 tracer(True)
 mainloop()
